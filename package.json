@@ -1,0 +1,21 @@
+{
+  "name": "playwright-crossad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright TypeScript automation framework for CrossAd",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^22.15.29",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.2"
+  }
+}

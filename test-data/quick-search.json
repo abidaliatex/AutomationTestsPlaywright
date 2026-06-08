@@ -1,0 +1,7 @@
+{
+  "tc_search02": {
+    "testcaseid": "tc_search02",
+    "testcasename": "verify quicksearch for customer with verifying customer name on customer page",
+    "customerName": "Autotest Customer"
+  }
+}

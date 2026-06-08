@@ -1,0 +1,8 @@
+[
+  {
+    "testcaseid": "tc_login_op",
+    "testcasename": "Login with standard operator user",
+    "username": "op",
+    "password": "butter"
+  }
+]

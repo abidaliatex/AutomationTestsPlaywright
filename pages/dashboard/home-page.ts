@@ -15,6 +15,9 @@ export class HomePage extends BasePage {
   private readonly quickSearchInput     = this.page.locator("(//input[@type='text'])[1]");
   private readonly quickSearchButton    = this.page.locator("(//button[@id='buttonSearch'])[1]");
   private readonly sideBarViewerBtn     = this.page.locator('#hamburgerIcon.hidden-xs');  // CrossAd_HomePageLocators.java → sideBarViewerLocator (desktop variant)
+  private readonly dashboardMenuLink    = this.page.locator('#dashboardMenu');
+  private readonly searchNavBtn         = this.page.locator("//span[contains(text(),'Search')]//parent::div//parent::a");
+  private readonly customersNavBtn      = this.page.locator("//ul//a[contains(text(),'Customers')]");
 
   constructor(page: Page) {
     super(page);
@@ -51,5 +54,22 @@ export class HomePage extends BasePage {
    */
   async clickSideBarViewer(): Promise<void> {
     await this.sideBarViewerBtn.click();
+  }
+
+  /**
+   * Navigate to the Dashboard — mirrors Selenium's hp.clickOnDashboard()
+   * Locator from CrossAd_HomePageLocators.java → linkDashboard: #dashboardMenu
+   */
+  async clickDashboard(): Promise<void> {
+    await this.dashboardMenuLink.click();
+  }
+
+  /**
+   * Navigate to Customer Search — mirrors Selenium's hp.gotoCustomerSearch()
+   * Clicks Search nav link, then Customers submenu item.
+   */
+  async gotoCustomerSearch(): Promise<void> {
+    await this.searchNavBtn.click();
+    await this.customersNavBtn.click();
   }
 }

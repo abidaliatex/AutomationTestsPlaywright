@@ -1,0 +1,14 @@
+[
+  {
+    "testcaseid": "tc_cno01",
+    "testcasename": "create general order",
+    "customerName": "Autotest Customer",
+    "packet": "ASND (ASND)",
+    "pricelist": "ASND (ASND)",
+    "placement": "Back page sec1 (BPSEC1)",
+    "columns": "3",
+    "height": "3",
+    "invoiceText": "Abid Ali new Test",
+    "salesman": "Jensen, Anne (dkanne)"
+  }
+]

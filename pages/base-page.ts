@@ -1,10 +1,13 @@
 import { type Locator, type Page } from '@playwright/test';
+import { Action } from '../utils/action';
 
 export class BasePage {
   protected readonly page: Page;
+  protected readonly act: Action;
 
   constructor(page: Page) {
     this.page = page;
+    this.act = new Action(page);
   }
 
   async goto(path = ''): Promise<void> {

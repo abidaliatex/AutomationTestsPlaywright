@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 import { env } from './config/env';
 
 export default defineConfig({
+  globalSetup: './global-setup.ts',
   testDir: './tests',
   timeout: 60_000,
   expect: {
@@ -17,6 +18,7 @@ export default defineConfig({
   ],
   use: {
     baseURL: env.baseUrl,
+    storageState: 'auth/user.json',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',

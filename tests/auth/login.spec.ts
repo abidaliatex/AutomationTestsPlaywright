@@ -11,6 +11,8 @@ interface LoginUser {
 const loginUsers = loadJson<LoginUser[]>('login-users.json');
 
 test.describe('Authentication', () => {
+  // Login tests must NOT use the saved storageState — they test the login flow itself
+  test.use({ storageState: { cookies: [], origins: [] } });
 
   /**
    * A1 — Basic login using credentials from environment config
